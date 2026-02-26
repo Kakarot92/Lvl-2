@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Threat Detector</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Login Threat Detector</h1>
+        <p>Enter your login details to check for potential threats.</p>
+        <form id="loginForm">
+            <input type="number" id = "failedAttempts" placeholder="Number of Failed Attempts" required />
+            <input type="checkbox" id = "unusualLocation" /> Unusual Location
+            <input type="checkbox" id = "recognizedDevice" /> Recognized Device
+            <br />
+            <br />
+            <button type="button">Scan Login</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
