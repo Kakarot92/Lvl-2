@@ -13,3 +13,17 @@ function loginThreatDetector(failedAttempts, unusualLocation, recognizedDevice) 
 }
 
 
+let number = document.getElementById("failedAttempts");
+let spot = document.getElementById("unusualLocation");
+let device = document.getElementById("recognizedDevice");
+let result = document.getElementById("result");
+
+let scanBtn = document.getElementById("scanBtn");
+
+scanBtn.addEventListener("click", function() {
+    let numberOfTry = parseInt(number.value);
+    let isUnusualLocation = spot.checked;
+    let isRecognizedDevice = device.checked;
+    let threatLevel = loginThreatDetector(numberOfTry, isUnusualLocation, isRecognizedDevice);
+    result.textContent = threatLevel;
+});
